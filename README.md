@@ -15,3 +15,6 @@ NODE_ENV=production docker compose -f docker-compose.yml -f docker-compose.prod.
 
 ### Conectarse al contenedor de la app
 docker exec -it cooperativa_nextjs_app bash
+
+## Crear royecto NextJS solo nodejs
+npx create-next-app@latest frontend --use-npm --javascript

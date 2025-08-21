@@ -1,23 +1,18 @@
-# frontend/Dockerfile
+# Usamos Node.js 20.10
 FROM node:20.10
 
+# Directorio de trabajo
 WORKDIR /app
 
-COPY package*.json ./
-COPY prisma ./prisma
-
+# Copiar package.json e instalar dependencias
+COPY ./frontend/package*.json ./
 RUN npm install
 
-COPY . .
+# Copiar el resto del proyecto
+COPY ./frontend ./
 
-# Generar la estructura de la BD
-#RUN npx prisma generate
-
-ARG NODE_ENV=development
-ENV NODE_ENV=$NODE_ENV
-
-RUN if [ "$NODE_ENV" = "production" ]; then npm run build; fi
-
+# Exponer puerto
 EXPOSE 3000
 
-CMD ["sh", "-c", "if [ \"$NODE_ENV\" = \"production\" ]; then npm run start; else npm run dev; fi"]
+# Comando por defecto
+CMD ["npm", "run", "dev"]
