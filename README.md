@@ -18,3 +18,11 @@ docker exec -it cooperativa_nextjs_app bash
 
 ## Crear royecto NextJS solo nodejs
 npx create-next-app@latest frontend --use-npm --javascript
+
+## Para ver los logs 
+docker compose logs
+
+### Especificamente de un contenedor
+docker compose logs nombre_contenedor
+docker compose logs -f nombre_contenedor
+docker compose logs -t
