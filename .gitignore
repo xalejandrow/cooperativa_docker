@@ -1,0 +1,12 @@
+# Carpetas
+frontend/node_modules
+frontend/.next
+mysql_data
+
+#archivos
+.git
+
+# Ignorar env con datos sensibles
+.env
+.env.*.local
+/generated/prisma
