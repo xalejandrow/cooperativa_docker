@@ -1,0 +1,11 @@
+# Carpetas
+frontend
+mysql_data
+
+#archivos
+.git
+
+# Ignorar env con datos sensibles
+.env
+.env.*.local
+/generated/prisma
