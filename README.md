@@ -26,3 +26,21 @@ docker compose logs
 docker compose logs nombre_contenedor
 docker compose logs -f nombre_contenedor
 docker compose logs -t
+
+## Instalar Prisma y generar cliente
+
+Dentro de frontend/:
+
+npm install prisma @prisma/client
+npx prisma generate
+npx prisma migrate dev --name init
+
+## Generar cliente Prisma y migrar
+Dentro de frontend/: del contenedor
+npx prisma generate
+npx prisma migrate dev --name init
+
+Esto crea la tabla User en MySQL.
+
+### Cargar seeds
+npm run prisma:seed
