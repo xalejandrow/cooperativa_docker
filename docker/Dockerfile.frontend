@@ -7,10 +7,11 @@ COPY frontend/package*.json ./
 RUN npm install
 
 # Copiamos el resto del frontend
-COPY frontend ./
+COPY ./frontend ./
+# COPY . .
 
 # Generar Prisma Client dentro del contenedor
-RUN npx prisma generate
+#RUN npx prisma generate
 
 # Exponemos puerto
 EXPOSE 3000

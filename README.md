@@ -4,7 +4,7 @@ docker compose up -d
 
 ### Crear la estructura de la BD
 NOTA: Después de tener ejecutado los contenedores, para crear la esctructura, ejecutar
-docker compose exec cooperativa_nextjs_app npx prisma migrate dev
+docker exec cooperativa_nextjs_app npx prisma migrate dev
 
 
 ### Producción (en servidor, con MySQL y Next.js en build):
