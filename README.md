@@ -41,6 +41,7 @@ npx prisma generate
 npx prisma migrate dev --name init
 
 Esto crea la tabla User en MySQL.
+npx prisma migrate push
 
 ### Cargar seeds
 npm run prisma:seed

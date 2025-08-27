@@ -3,12 +3,13 @@ FROM node:20.10
 WORKDIR /app
 
 # Copiamos package.json e instalamos dependencias
-COPY frontend/package*.json ./
-RUN npm install
+COPY ../frontend/package*.json ./
+# RUN npm install
 
 # Copiamos el resto del frontend
-COPY ./frontend ./
+COPY ../frontend ./
 # COPY . .
+RUN npm install
 
 # Generar Prisma Client dentro del contenedor
 #RUN npx prisma generate
